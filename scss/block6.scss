@@ -1,0 +1,39 @@
+.block6{
+    grid-area: block6;
+    display: grid;
+    grid-template-areas: "block6_title"
+    "block6_body";
+    padding-top: 80px;
+
+}
+.block6_title{
+    grid-area: block6_title;
+    font-size: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.block6_body{
+    grid-area: block6_body;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img{
+        width: 100px;
+        height: auto;
+    }
+}
+.block6_ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.block6_li{
+    margin-left: 20px;
+    padding-top: 80px;
+}

@@ -1,0 +1,89 @@
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: "footer_title footer_title" "footer_left footer_right";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 70px;
+  background-image: url("/images/bg/bg_footer.png");
+  background-position: center center;
+  background-size: cover; }
+
+.footer_title {
+  grid-area: footer_title;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  color: white; }
+
+.footer_left {
+  grid-area: footer_left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.footer_link_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 24px; }
+
+.footer_left_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.footer_left_li img {
+  width: 35px;
+  height: 35px; }
+
+.footer_left_li_cent {
+  margin: 0 15px; }
+
+.footer_right {
+  grid-area: footer_right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.footer_right_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.footer_right_ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.footer_right_li {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .footer_right_li p {
+    font-size: 20px;
+    color: white; }
+  .footer_right_li a {
+    font-size: 18px;
+    display: table;
+    background: #008009;
+    background: -moz-linear-gradient(45deg, #008009 0%, #cfffba 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #008009), color-stop(100%, #cfffba));
+    background: -webkit-linear-gradient(45deg, #008009 0%, #cfffba 100%);
+    background: -o-linear-gradient(45deg, #008009 0%, #cfffba 100%);
+    background: -ms-linear-gradient(45deg, #008009 0%, #cfffba 100%);
+    background: linear-gradient(45deg, #008009 0%, #cfffba 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008009', endColorstr='#cfffba', GradientType=1 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }

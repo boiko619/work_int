@@ -1,0 +1,56 @@
+.block5{
+    grid-area: block5;
+    display: grid;
+    grid-template-areas: "block5_left block5_right";
+    grid-template-columns: 8fr 4fr;
+    grid-template-rows: 600px;
+    background-image: url("/images/block51.png");
+    background-position:  center;
+    background-size: cover;
+}
+.block5_left{
+    grid-area: block5_left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 44px;
+
+}
+.block5_right{
+    grid-area: block5_right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-inline-start: 30px;
+}
+.block5_right_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 44px;
+}
+.block5_right_body{
+    display: grid;
+    grid-template-areas: "block5_left_ul"
+    "call_me";
+}
+.block5_left_ul{
+    grid-area: block5_left_ul;
+}
+@import "form.scss";
+.color{
+    color: rgb(11, 117, 117);
+}
+.block5_li1{
+    text-transform: uppercase;
+}
+
+
+
+.block5_right { width: 100%; height: 600px; background-color: rgba(119, 119, 119, 0.521);; position: relative;}
+.block5_right::before{ display: block; content: ""; 	border-bottom: 600px solid rgba(119, 119, 119, 0.521);; 
+	border-left: 160px solid transparent;
+display: block;
+width: 0;
+height: 0; position: absolute; top: 0px; left: -160px; margin-bottom: 0px;}

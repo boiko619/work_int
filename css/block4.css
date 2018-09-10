@@ -1,0 +1,41 @@
+.block4 {
+  grid-area: block4;
+  display: grid;
+  grid-template-areas: "block4_left block4_right";
+  grid-template-columns: 1fr 1fr;
+  background-image: url("/images/bit.png");
+  background-position: center;
+  background-size: cover; }
+
+.block4_left {
+  grid-area: block4_left;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.block4_tille {
+  padding-top: 100px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+  .block4_tille h2 {
+    font-size: 40px; }
+
+.block4_info_ul {
+  margin-bottom: 60px; }
+
+.block4_info_li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px; }
+  .block4_info_li img {
+    margin-right: 10px; }
+  .block4_info_li p {
+    font-size: 26px; }
+
+.block4_right {
+  grid-area: block4_right; }
