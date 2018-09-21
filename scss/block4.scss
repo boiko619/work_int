@@ -4,7 +4,7 @@
     grid-template-areas: "block4_left block4_right";
     grid-template-columns: 1fr 1fr;
     background-image: url("/images/bit.png");
-background-position: center;
+background-position: center right;
 background-size: cover;
 
 }
@@ -15,7 +15,25 @@ background-size: cover;
     flex-direction: row;
     justify-content: center;
 
+    position: relative;
+
 }
+#block4_left{
+    left: -1110px;
+    transition: all 0.4s;
+    position: relative;
+}
+ /*#block4_left{
+   
+    position: relative;
+
+}*/
+.block4_left { width: 100%; height: 663px; background-color: rgba(121, 137, 122, 0.722); position: relative;}
+.block4_left::after { display: block; content: ""; 	border-bottom: 663px solid rgba(121, 137, 122, 0.722); 
+	border-right: 160px solid transparent;
+    display: block;
+    width: 0;
+    height: 0; position: absolute; top: 0px; right: -160px; margin-bottom: 0px;}
 .block4_tille{
     padding-top:100px; 
     margin-bottom: 80px;
@@ -24,7 +42,10 @@ background-size: cover;
     justify-content: flex-start;
     align-items: center;
     h2{
+        text-transform: uppercase;
         font-size: 40px;
+        font-family: 'Lora', serif;
+
     }
 }
 .block4_info_ul{
@@ -41,9 +62,50 @@ background-size: cover;
     }
     p{
         font-size: 26px;
+        font-family: 'Source Sans Pro', sans-serif;
 
     }
 }
 .block4_right{
     grid-area: block4_right;
+    
+}
+@media screen and (max-width:1200px){
+
+    .block4{
+    grid-template-columns: 4fr 2fr;}
+}
+@media screen and (max-width:700px){
+
+    .block4{
+    grid-template-columns: 1fr;
+    grid-template-areas: "block4_left";
+
+}
+.block4_left::after{
+    display: none;
+}
+.block4_right{
+    display: none;
+}
+}
+@media screen and (max-width:500px){
+    .block4_tille{
+    margin-bottom: 40px;
+    h2{
+        font-size: 32px;
+    }
+    }
+    .block4_info_li{
+        p{
+            font-size: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+    
+        }
+    }
+    .block4{
+        background-image: url("/images/bit_media.png");
+        background-position: center center;
+
+    }
 }

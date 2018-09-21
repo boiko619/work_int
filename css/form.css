@@ -8,6 +8,7 @@
   display: grid;
   grid-template-areas: "call_me_form" "call_me_bottom";
   grid-template-rows: 310px 150px;
+  grid-template-columns: 500px;
   width: 500px;
   grid-area: call_me_block;
   position: relative;
@@ -47,7 +48,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 20px; }
+  padding: 20px 20px;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .call_me_bottom {
   grid-area: call_me_bottom;
@@ -81,7 +83,7 @@
 #sub {
   width: 330px;
   height: 60px;
-  background: #29860c;
+  background: #79897a;
   border: none;
   font-size: 22px;
   color: #fff;
@@ -93,7 +95,7 @@
   height: 60px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  background: #1c7501;
+  background: #435344;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -105,9 +107,49 @@
   flex-direction: row;
   font-size: 13px;
   align-items: center;
-  padding: 0 20px; }
+  padding: 0 20px;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .call_me_blocked {
   margin: 20px 0; }
   .call_me_blocked img {
     margin-right: 5px; }
+
+@media screen and (max-width: 650px) {
+  .form_top, .form_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .form_tel, .form_mail, .form_name, .form_surn {
+    padding-top: 35px;
+    align-self: center; }
+    .form_tel p, .form_mail p, .form_name p, .form_surn p {
+      padding-left: 2px;
+      padding-bottom: 2px; }
+  .call_me_block {
+    display: grid;
+    grid-template-areas: "call_me_form" "call_me_bottom";
+    grid-template-rows: 510px 150px;
+    grid-area: call_me_block;
+    position: relative;
+    border-radius: 10px; }
+  .call_me_bottom {
+    flex-direction: column; }
+  .call_me_bottom_info {
+    align-self: center; }
+  #sub {
+    width: 220px; }
+  .sub_pre {
+    width: 30px; } }
+
+@media screen and (max-width: 550px) {
+  .call_me {
+    grid-area: call_me;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; }
+  .call_me_block {
+    grid-template-columns: 350px;
+    justify-content: center; } }

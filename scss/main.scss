@@ -65,6 +65,7 @@ $white: #fff;
 
 
 .body_pages{
+    position: relative;
     display: grid;
     /*grid-template-areas: ". header . "
     " . block4 . "
@@ -72,37 +73,75 @@ $white: #fff;
     //grid-template-columns: minmax(10px, 1fr) 1200px minmax(10px, 1fr);
     /*grid-template-rows: 1fr  1fr  1fr  1fr 1fr ;*/
     //grid-template-columns: 1080px minmax(10px, 1fr);*/
-    grid-template-areas: "  .  header . "
+    grid-template-areas: 
+    " nav nav nav "
+    " . header . "
+    " block2 block2 block2 "
     " . block3 . "
     " block4 block4 block4 "
-    " block5 block5 block5 "
     " . block6 . "
+    " block5 block5 block5 "
     "  footer footer footer "
 
 
     ;
     grid-template-columns: minmax(10px, 1fr) minmax(10px, 1080px) minmax(10px, 1fr);
     -webkit-box-shadow: 0px 0px 54px 3px rgba(0,0,0,0.56);
--moz-box-shadow: 0px 0px 54px 3px rgba(0,0,0,0.56);
-box-shadow: 0px 0px 54px 3px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 54px 3px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 54px 3px rgba(0,0,0,0.56);
 }
-
+#top{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: #79897a;
+    border-radius: 5px;
+    transition: all 0.7s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+    img{
+        width: 35px;
+        height: 25px;
+    }
+    opacity: 0;
+}
+input {
+    outline:none;
+}
+a {
+    outline:none;
+}
+@import "nav.scss";
 @import "header.scss";
+@import "block2.scss";
 @import "block3.scss";
 @import "block4.scss";
-@import "block5.scss";
 @import "block6.scss";
+@import "block5.scss";
+
 //@import "footer.scss";
 
 
 @media screen and (max-width:1100px){
     .body_pages{
         display: grid;
-        grid-template-areas: " . header . "
-        " block4 block4 block4 "
+        grid-template-areas:
+        " nav nav nav "
+        " header header header "
+        " block2 block2 block2 "
         " block3 block3 block3 "
-        " block5 block5 block5 "
+        " block4 block4 block4 "
+
         " block6 block6 block6 "
+        " block5 block5 block5 "
+
 
         "  footer footer footer "
 
